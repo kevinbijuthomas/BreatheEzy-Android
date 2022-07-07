@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <com.kevin.breatheezy.view.CenteredToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:theme="@style/ActionBar" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Treatment name"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="20dp"
+        app:met_baseColor="@color/almostBlack98"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="?colorAccent" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etPuffs"
+        android:editable="false"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of puffs"
+        android:layout_below="@+id/etName"
+        android:layout_margin="20dp"
+        app:met_baseColor="@color/almostBlack98"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="?colorAccent" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etTimes"
+        android:editable="false"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of times"
+        android:layout_below="@+id/etPuffs"
+        android:layout_margin="20dp"
+        app:met_baseColor="@color/almostBlack98"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="?colorAccent" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="12dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:fb_borderColor="@color/colorWhite"
+        app:fb_borderWidth="1dp"
+        app:fb_defaultColor="@color/colorGreen"
+        app:fb_focusColor="#9bd823"
+        app:fb_radius="5dp"
+        app:fb_text="Save"
+        app:fb_textColor="@color/colorWhite" />
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <com.kevin.breatheezy.view.CenteredToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:theme="@style/ActionBar" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/toolbar"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/cvYellowAndOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        app:cardBackgroundColor="#E6E6E6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Continue your regular medications Keep calm, avoid exertion Start reliever medicine – as below"
+                android:textColor="@color/almostBlack98"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/cvYellowAndOrange"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/cvRedZoneDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        app:cardBackgroundColor="#ff5555"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Start Reliever as below\n Do not panic\nSee doctor as soon as possible\nCall Ambulance"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnAmbulance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="12dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:fb_iconResource="@drawable/icon_phone"
+                app:fb_iconPosition="right"
+                app:fb_textSize="20sp"
+                app:fb_borderColor="@color/colorWhite"
+                app:fb_borderWidth="1dp"
+                app:fb_defaultColor="#ffffff"
+                app:fb_focusColor="#9bd823"
+                app:fb_radius="5dp"
+                app:fb_text="Call Ambulance"
+                app:fb_textColor="@color/colorBlack" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/cvRedZoneDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="5dp"
+        app:cardBackgroundColor="#ff5555"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+            <LinearLayout
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="tvName"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPuffs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="tvPuffs"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="tvTimes"
+                    android:textSize="18sp" />
+            </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

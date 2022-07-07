@@ -1,0 +1,52 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kevin.breatheezy">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.contacts.ContactsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.contacts.EditContactsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.about.AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.about.AboutTriggersActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.about.AboutLinkActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.about.AboutExpandableActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LungFunctionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DiaryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DiaryCreateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AddTreatmentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ActionPlanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ZoneActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

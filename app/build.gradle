@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.kevin.breatheezy"
+        minSdkVersion 27
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.0'
+
+    // Global Preference Manager
+    implementation 'com.orhanobut:hawk:2.0.1'
+    //Permission Library
+    implementation 'me.tankery.lib:permission-requester:1.0.0'
+    //Material Drawer
+    implementation 'com.github.arindam2ghosh:MaterialDrawer:2.2'
+    implementation('com.balysv:material-ripple:1.0.2') { exclude module: 'support-v4' }
+    //Material EditText
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //Fancy Buttons
+    implementation 'com.github.medyo:fancybuttons:1.9.0'
+    //Icon Library
+    implementation 'net.steamcrafted:materialiconlib:1.1.5'
+    //Chart Library
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //Custom Dialog
+    implementation 'com.github.arindam2ghosh:BestDialog:1.0'
+    //Calendar
+    implementation 'com.applandeo:material-calendar-view:1.7.0'
+    //Sweepable RecyclerView
+    implementation 'com.github.alex-townsend:SwipeOpenItemTouchHelper:2.0.0'
+    //Alarm Library
+    implementation 'com.github.arindam2ghosh:Alarm-Manager-Library:1.4'
+
+    //Room Database
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+}
